@@ -70,7 +70,7 @@ async def on_message(message: discord.Message):
         # create folder website_data if not exists
         if not os.path.exists('website_data'):
             os.mkdir('website_data')
-            
+
 
         # check if file inverted_index.json exists
         if not os.path.exists('inverted_index.json'):
@@ -187,7 +187,7 @@ async def on_message(message: discord.Message):
             df = tf_maior_0 / count_files
             tf_df = max_tf/df
             await message.channel.send(f'''
-            O termo {search_term} com o maior TF/DF é o {max_tf_website} com o valor de {tf_df}, o TF é {max_tf} e o DF é {df}
+            O termo {search_term} com o maior TF/DF esta no documento {max_tf_website} com o valor de {tf_df}, o TF é {max_tf} e o DF é {df}
             ''')
     
     # check if the message start with !wn_search
